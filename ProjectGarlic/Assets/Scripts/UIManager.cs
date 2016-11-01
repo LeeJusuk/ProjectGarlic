@@ -16,12 +16,11 @@ public class UIManager : MonoBehaviour {
 	void Start () {
 		panels = gameObject.GetComponentsInChildren<MyPanel> ();
 		length = panels.Length;
-
+		/*
 		print (length);
 		for(int i=0;i<length;i++){
-
 			panels [i].Debug ();
-		}
+		}*/
 	}
 	
 	// Update is called once per frame

@@ -8,8 +8,10 @@ public class DnaPanel : MyPanel {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	public override void _Update () {
+		if(Input.GetKeyDown(KeyCode.Q)){
+			uiManger.ActiveDefaultPanel ();
+		}
 	}
 
 	public override void OnActive()
