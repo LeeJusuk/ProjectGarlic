@@ -29,4 +29,28 @@ public class TestGame : MonoBehaviour {
 		uiManager._Update ();
 
 	}
+
+	//기준 화면 폭
+	readonly float defaultScreenWidth = 1136;
+	//현재 지정되어 있는 화면 폭과 실제 화면 폭과의 비율을 계산
+	public static Rect ScaleRect(Rect origin){		
+		float factorSize = Screen.width / defaultScreenWidth;
+
+		float scalePosX	=origin.x*factorSize;
+		float scalePosY	=origin.y*factorSize;
+		float scaleSizeX=origin.width*factorSize;
+		float scaleSizeY=origin.height*factorSize;
+
+		return new Rect(scalePosX,scalePosY,scaleSizeX,scaleSizeY);
+	}
+	public static Rect ScaleRect(float originX,float originY, float originWieth,float originHeight){		
+		float factorSize = Screen.width / defaultScreenWidth;
+
+		float scalePosX	=originX*factorSize;
+		float scalePosY	=originY*factorSize;
+		float scaleSizeX=originWieth*factorSize;
+		float scaleSizeY=originHeight*factorSize;		
+
+		return new Rect(scalePosX,scalePosY,scaleSizeX,scaleSizeY);
+	}
 }
