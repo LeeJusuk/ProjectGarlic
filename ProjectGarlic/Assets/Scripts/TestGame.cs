@@ -10,6 +10,7 @@ public class TestGame : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		Screen.SetResolution (Screen.width, Screen.width * 16 / 10, true);
 		flag = false;
 	}
 
