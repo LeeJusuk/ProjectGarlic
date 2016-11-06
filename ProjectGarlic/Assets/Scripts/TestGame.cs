@@ -31,7 +31,7 @@ public class TestGame : MonoBehaviour {
 	}
 
 	//기준 화면 폭
-	readonly float defaultScreenWidth = 1136;
+	static readonly float defaultScreenWidth = 1136;
 	//현재 지정되어 있는 화면 폭과 실제 화면 폭과의 비율을 계산
 	public static Rect ScaleRect(Rect origin){		
 		float factorSize = Screen.width / defaultScreenWidth;
